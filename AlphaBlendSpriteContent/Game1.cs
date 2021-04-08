@@ -79,8 +79,7 @@ namespace AlphaBlendSpriteContent
     /// <param name="gameTime">このメソッドが呼ばれたときのゲーム時間</param>
     protected override void Update(GameTime gameTime)
     {
-      // Xbox 360 コントローラ、Windows Phone の BACK ボタンを押したときに
-      // ゲームを終了させます
+      // ゲームパッドの Back ボタン、またはキーボードの Esc キーを押したときにゲームを終了させます
       if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
       {
         Exit();
